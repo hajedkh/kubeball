@@ -1,0 +1,43 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: passenger-api-nodeport
+spec:
+  selector:
+    app: passenger-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: trip-api-nodeport
+spec:
+  selector:
+    app: trip-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: driver-api-nodeport
+spec:
+  selector:
+    app: driver-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
+

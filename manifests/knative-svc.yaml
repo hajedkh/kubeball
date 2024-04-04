@@ -1,0 +1,48 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: payment-api
+  namespace: default
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/min-scale: "1"
+        autoscaling.knative.dev/target: "10"
+    spec:
+      containers:
+        - image: ghcr.io/knative/helloworld-go:latest
+
+---
+
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: alert-api0
+  namespace: default
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/min-scale: "1"
+        autoscaling.knative.dev/target: "10"
+    spec:
+      containers:
+        - image: ghcr.io/knative/helloworld-go:latest
+
+---
+
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: billing-api
+  namespace: default
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/min-scale: "1"
+        autoscaling.knative.dev/target: "10"
+    spec:
+      containers:
+        - image: ghcr.io/knative/helloworld-go:latest
