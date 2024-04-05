@@ -1,3 +1,6 @@
+
+
+![Plan](https://github.com/hajedkh/kubeball/blob/main/plan.png?raw=true)
 Opponent team :
 ![Opponent](https://github.com/hajedkh/kubeball/blob/main/kubeBall-Uber.png?raw=true)
 Kube team (my proposition):
